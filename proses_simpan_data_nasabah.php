@@ -22,9 +22,10 @@ if (isset($_POST)){
             . "`jumlah_pembiayaan`, "
             . "`keperluan`, "
             . "`jangka_waktu`, "
-            . "`angunan/jaminan`, "
+            . "`angunan`, "
             . "`total_penghasilan`, "
-            . "`karakter`"
+            . "`karakter`,"
+            . "`kelayakan`"
             . ") "
             . "VALUES "
             . "("
@@ -39,7 +40,8 @@ if (isset($_POST)){
             . "'".$_POST["jangka_waktu"]."', "
             . "'".$_POST["angunan/jaminan"]."', "
             . "'".$_POST["total_penghasilan"]."', "
-            . "'".$_POST["karakter"]."');") or exit(mysql_error());
+            . "'".$_POST["karakter"]."', "
+            . "'".$_POST["kelayakan"]."');") or exit(mysql_error());
     
     echo "<script>window.location = 'tampil_list_data_nasabah.php'</script>";
 }

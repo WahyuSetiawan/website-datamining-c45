@@ -76,7 +76,7 @@
                                 <td><?php echo $data['pekerjaan'] ?></td>
                                 <td><?php echo $data['total_penghasilan'] ?></td>
                                 <td><?php echo $data['karakter'] ?></td>
-                                <td><?php echo $data['id'] ?></td>
+                                <td><?php echo $data['kelayakan'] ?></td>
                                 <td>
                                     <a href="proses_delete_data_nasabah.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Delete</a>
                                     <a href="" class="btn btn-info">Detail</a>

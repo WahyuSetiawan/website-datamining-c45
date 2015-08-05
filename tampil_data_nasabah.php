@@ -40,44 +40,57 @@
                         <label class="control-label col-sm-3">Jenis Pembiayaan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="jenis_pembiayaan">
-                                <option>Murabahah</option>
-                                <option>Qardhul Hasan</option>
-                                <option>Musyarakah</option>
-                                <option>Ijaroh</option>
-                                <option>Mudharabah</option>
+                                <?php
+                                include './Variable.php';
+
+                                foreach ($variable['jenis_pembiayaan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Pekerjaan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="pekerjaan">
-                                <option>Usaha</option>
-                                <option>Non Usaha</option>
+                                <?php
+                                foreach ($variable['pekerjaan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Jumlah Tanggungan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="jumlah_tanggungan">
-                                <option>0-2 Orang</option>
-                                <option>>=3 Orang</option>
+                                <?php
+                                foreach ($variable['jumlah_tanggungan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Jumlah Pembiayaan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="jumlah_pembiayaan">
-                                <option><5 Juta</option>
-                                <option>5 - 50 Juta</option>
-                                <option>>50 Juta</option>
+                                <?php
+                                foreach ($variable['jumlah_pembiayaan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Keperluan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="keperluan">
-                                <option>Tambah Modal</option>
-                                <option>Beli Barang</option>
+                                <?php
+                                foreach ($variable['keperluan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -85,43 +98,55 @@
                         <label class="control-label col-sm-3">Jangka Waktu</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="jangka_waktu">
-                                <option>1 - 12 Bulan</option>
-                                <option>13 - 24 Bulan</option>
-                                <option>25 - 36 Bulan</option>
+                                <?php
+                                foreach ($variable['jangka_waktu'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Agunan / Jaminan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="angunan/jaminan">
-                                <option><10 Juta</option>
-                                <option>10 - 50 Juta</option>
-                                <option>>50 Juta</option>
+                                <?php
+                                foreach ($variable['angunan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Total Penghasilan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="total_penghasilan">
-                                <option>< 4 Juta</option>
-                                <option>4 - 7 Juta</option>
-                                <option>> 7 Juta</option>
+                                <?php
+                                foreach ($variable['total_penghasilan'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Karakter</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="karakter">
-                                <option>Baik</option>
-                                <option>Bermasalah</option>
+                                <?php
+                                foreach ($variable['karakter'] as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div> <div class="form-group">
                         <label class="control-label col-sm-3">Kelayakan</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="kelayakan">
-                                <option>Ya</option>
-                                <option>Tidak</option>
+                                <?php
+                                foreach ($probabilitas as $value) {
+                                    echo '<option>' . $value . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>

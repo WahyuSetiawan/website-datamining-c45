@@ -23,7 +23,9 @@
                 <button type="button" class="btn btn-warning">Refresh</button>
             </p>
             <p>
-                
+                <?php
+                    include './proses_algoritma_running.php';
+                ?>
             </p>
         </div>
         <?php include './footer.php'; ?>
