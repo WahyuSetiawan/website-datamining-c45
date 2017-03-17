@@ -1,0 +1,24 @@
+#ErrorDocument 404 /watpol/
+
+RewriteEngine On
+
+#RewriteCond %{THE_REQUEST} \ /(.+)\.php
+#RewriteRule ^ /%1 [L,R=301]
+
+#RewriteCond %{THE_REQUEST} \ /(.+)\index
+#RewriteRule ^ /%1 [L,R=301]
+
+#RewriteCond %{THE_REQUEST} \ /(.+)\?page=
+#RewriteRule ^ /%1 [L,R=301]
+
+#RewriteRule ^([a-zA-Z0-9]+)$ ?page=$1&uid=$2
+#RewriteRule ^([a-zA-Z0-9]+)$ $1.php
+
+RewriteRule ^([a-zA-Z0-9]+)/?$ ?page=$1 [NC,L]
+#RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ ?page=$1&op=$2 [NC,L]
+#RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9_\-]+)/?$ ?page=$1&op=$2&uid=$3 [NC,L]
+
+php_value max_input_vars 3000
+php_value memory_limit 200M
+php_value max_execution_time 1000000
+php_value max_input_time 1000000
